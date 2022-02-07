@@ -12,7 +12,7 @@ def gameIntro(): # Introduce the game
     print()
 
 
-def printAttempts(attempts):
+def printAttempts(attempts): # Give current attempt number
     print("This is attempt number ",(7-attempts),":",end="")
 
 def userInputAndCheck(attemptList): # Take user input and check if it is valid

@@ -20,9 +20,9 @@ WHILE number of attempts run out or user wins
 #Game Introduction
 ui.gameIntro()
 
-solution = dictionary.randomWord()
-
-print("Solution is ",solution,"\n")# Debug Line
+solution = dictionary.randomWord() # Generate a random word
+ 
+# print("Solution is ",solution,"\n")# Debug Line
 attempts = 6 # Number of attempts allowed
 attemptList = [] # Records number of user's tried words
 
@@ -35,10 +35,10 @@ while True: # Runs the loop until number of attempts run out, or the user wins.
     pos = 0 # Used to track the letter that is being used in the actual word to create result
 
 
-    ui.printAttempts(attempts)
+    ui.printAttempts(attempts) # Current attempt number
     
-    userInput = ui.userInputAndCheck(attemptList)
-    attemptList.append("".join(userInput))
+    userInput = ui.userInputAndCheck(attemptList) # Check if word is valid
+    attemptList.append("".join(userInput)) # Track used words
     
     for i in range(5): # Checking for correct letters in correct positions first, to ensure highest priority
         if(userInput[i] == solution[i]):
@@ -58,9 +58,9 @@ while True: # Runs the loop until number of attempts run out, or the user wins.
             result[i] = ("\"")
 
 
-    ui.printRound(userInput,result)
+    ui.printRound(userInput,result) # Show result of current input
 
-    if ui.checkWin(attempts,flag):
+    if ui.checkWin(attempts,flag): # Check if user has won / out of attempts
         break
     
     attempts = attempts-1
