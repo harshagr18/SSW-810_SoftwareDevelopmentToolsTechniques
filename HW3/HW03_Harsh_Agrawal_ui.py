@@ -12,6 +12,9 @@ def gameIntro(): # Introduce the game
     print()
 
 
+def printAttempts(attempts):
+    print("This is attempt number ",(7-attempts),":",end="")
+
 def userInputAndCheck(attemptList): # Take user input and check if it is valid
     while True: # Input from user until the correct type of input is provided (size, alphabetic, not previously used)
         userInput = list(input().upper())

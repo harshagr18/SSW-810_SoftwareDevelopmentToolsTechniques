@@ -33,8 +33,9 @@ while True: # Runs the loop until number of attempts run out, or the user wins.
     result = ["","","","",""] # Assigns "+","-" or "^" depending on correct and incorrect letters and positions
     search = ["0","0","0","0","0"] # Used to check if a letter has been used, so same letter doesn't give 2 positive outputs.
     pos = 0 # Used to track the letter that is being used in the actual word to create result
-    
-    print("This is attempt number ",(7-attempts),":",end="") 
+
+
+    ui.printAttempts(attempts)
     
     userInput = ui.userInputAndCheck(attemptList)
     attemptList.append("".join(userInput))
