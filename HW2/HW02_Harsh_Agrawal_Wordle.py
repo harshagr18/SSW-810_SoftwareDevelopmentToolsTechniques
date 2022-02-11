@@ -24,7 +24,7 @@ print("You will have 6 guesses.")
 print()
 
 
-solution = list("SONAR") # Solution variable
+solution = list("SOOON") # Solution variable
 attempts = 6 # Number of attempts allowed
 attemptList = [] # Records number of user's tried words
 
